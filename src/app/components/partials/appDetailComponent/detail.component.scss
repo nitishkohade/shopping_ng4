@@ -1,0 +1,42 @@
+
+@import '../../../base.scss';
+
+.productImage {
+  height: 450px;
+}
+.flexbox {
+  display: flex;
+  flex-wrap: wrap;
+}
+.flex-item {
+  max-width: 50%;
+  flex: 0 0 50%;
+}
+.full-flex {
+  flex: 0 0 100%;
+}
+@media  (max-width:480px)
+{
+ .flex-item {
+  max-width: 100%;
+  flex : 0 0 100%;
+  border-bottom: 1px solid #ccc;
+}
+}
+
+.browse-view
+{
+.image-box-color {
+    margin: 0;
+    width: 42px;
+    height: 42px;
+    padding: 9px;
+}
+ .outLineGrey {
+    outline: 1px solid #ddd;
+}
+}
+.max-width
+{
+  max-width:100%;
+}

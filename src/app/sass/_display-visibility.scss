@@ -1,0 +1,106 @@
+//display and visibility
+
+.display-none {
+  display: none !important;
+}
+
+.display-block, .block {
+  display: block !important;
+}
+
+.display-inline {
+  display: inline !important;
+}
+
+.display-flex {
+  display: flex !important;
+}
+
+.display-inline-block, .inline, .inline-block {
+  display: inline-block !important;
+}
+
+.display-inline-flex, .inline-flex {
+  display: inline-flex !important;
+}
+
+.hidden {
+  visibility: hidden !important;
+}
+
+.overflow-hidden {
+  overflow: hidden !important;
+}
+
+.overflow-auto {
+  overflow: auto !important;
+}
+
+.overflow-visible {
+  overflow: visible !important;
+}
+
+@media (max-width:$mobileMax) {
+  .display-none-xs {
+    display: none !important;
+  }
+}
+
+@media (min-width:$device-min-sm) {
+  .display-none-sm {
+    display: none !important;
+  }
+}
+
+@media (min-width:$device-min-md) {
+  .display-none-md {
+    display: none !important;
+  }
+}
+
+@media (min-width:$device-min-lg) {
+  .display-none-lg {
+    display: none !important;
+  }
+}
+
+@media (max-width:$device-max-sm) {
+  .display-none-max-sm {
+    display: none !important;
+  }
+}
+
+@media (max-width:$device-max-md) {
+  .display-none-max-md {
+    display: none !important;
+  }
+}
+
+.display-none-pseudo:before,
+.display-none-pseudo:after {
+  display: none !important
+}
+
+.display-none-pseudo-before:before {
+  display: none !important
+}
+
+.display-none-pseudo-after:after {
+  display: none !important
+}
+
+@media (max-width:$mobileMax) {
+  .display-inline-xs {
+    display: inline !important;
+  }
+}
+
+@media (max-width:$mobileMax) {
+  .display-block-xs {
+    display: block !important;
+  }
+}
+
+.word-wrap {
+  word-wrap: break-word;
+}

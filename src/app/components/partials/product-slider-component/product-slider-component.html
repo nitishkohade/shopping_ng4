@@ -1,0 +1,11 @@
+
+   <ngx-slick class="carousel" #slickModal="slick-modal" [config]="slideConfig" (afterChange)="afterChange($event)">
+        <div ngxSlickItem *ngFor="let slide of items" class="slide text-center">
+              <img class="productImage" src="https://www.t-mobile.com{{slide}}" alt="" >
+        </div>
+    </ngx-slick>
+
+  <!--   <button (click)="addSlide()">Add</button>
+    <button (click)="removeSlide()">Remove</button>
+    <button (click)="slickModal.slickGoTo(2)">slickGoto 2</button>
+    <button (click)="slickModal.unslick()">unslick</button> -->

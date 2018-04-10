@@ -1,0 +1,40 @@
+<div class="m-b-15 product-img text-center">
+  <a [routerLink]="[item.offerId]" tabindex="0" role="link">
+                        <img alt="Image of {{item.productDisplayName}}"
+                         title="Image of {{item.productDisplayName}}"
+                          class="{{item.productDisplayName}}-img"
+                          height="220" src="https://www.t-mobile.com{{item.defaultProduct.thumbNail}}"></a>
+</div>
+
+<a [routerLink]="[item.offerId]" class="m-b-5 product-name text-center regular block" tabindex="0" role="link">
+   {{item.productDisplayName}}
+  </a>
+<div class="m-b-10 prod-reviews text-center pointer">
+  <a role="link" tabindex="0" [routerLink]="[item.offerId]">
+      <span class="BVRRRatingNormalImage">
+        <img title="0/5" alt="0/5" class="BVImgOrSprite"
+             aria-hidden="true" src="{{item.reviewStarImagePath}}" />
+            </span>
+      <span ng-class="vm.product.reviews.aggregateRating ==''?'text-gray':'text-magenta'"
+            class="text-gray">
+        (<span class="BVreview ng-binding"
+               title="Read all reviews" aria-hidden="true"
+              > {{item.rating}} </span>)
+      </span></a>
+</div>
+<div class="m-b-10 color-swatches text-center">
+
+  <ul class="list-unstyled " role="list" *ngIf="item.swatchData.length >1">
+
+    <li class="inline-block " *ngFor="let path of item.swatchData; let i=index" (click)="updateColorSwatch(i,path)" role="listitem"
+      [ngClass]="item.defaultProduct.color==path.color ? 'active' : ''">
+      <a><img class="p-l-10 p-r-10 p-t-10 p-b-10 border"
+      src="https://www.t-mobile.com{{path.colorSwatch}}" /></a>
+
+    </li>
+
+  </ul>
+
+</div>
+<app-money [price]="item.defaultProduct.price ">
+</app-money>

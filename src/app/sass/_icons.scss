@@ -1,0 +1,28 @@
+// Icons
+.icon {
+  color: $brandMagenta;
+  font-size: 1rem;
+
+  i {
+    font-size: 1.4rem;
+    padding-right: $globalSpacingXSmall;
+
+    &.fa-angle-left, &.fa-angle-right {
+      font-size: 4rem;
+
+      &.disabled {
+        color: $grayLight;
+        cursor: default;
+      }
+    }
+
+    &.search {
+      font-size: 1.6rem;
+    }
+
+    &.fa-circle, &.fa-circle-o {
+      font-size: 1.2rem;
+      padding-right: 11px;
+    }
+  }
+}

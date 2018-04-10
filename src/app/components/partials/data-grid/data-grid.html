@@ -1,0 +1,32 @@
+<div *ngIf="dataList.length>0">
+<h1>Display Data</h1>
+
+<table class="table table-bordered table-hover">
+  <thead class="thead-inverse">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>City</th>
+        <th>Pin</th>
+        <th>Message</th>
+         <th>Remove</th>
+
+    </tr>
+  </thead>
+    <tr *ngFor="let item of dataList, let i=index">
+        <td >{{item.name}}</td>
+        <td >{{item.email}}</td>
+        <td >{{item.address.city}}</td>
+        <td >{{item.address.pin}}</td>
+        <td >{{item.message}}</td>
+        <td ><span (click)="remove(i)">Delete</span>
+
+            <span (click)="edit(i,item)">Edit</span>
+
+
+        </td>
+    </tr>
+
+</table>
+
+</div>

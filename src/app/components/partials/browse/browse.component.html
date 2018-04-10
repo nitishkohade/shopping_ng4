@@ -1,0 +1,20 @@
+<div class="browse-view m-t-15">
+
+
+  <div class="row">
+    <app-credit-page></app-credit-page>
+    <app-filterandsort  [filterItems]='filterItems'
+    (selectedFilterItems) = "selectedFilterItems($event)"></app-filterandsort>
+    <div class="m-t-35 m-b-35 text-center col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+      <p class="lead ng-binding" (click)="get($event)">Buy over $20 of accessories, get FREE SHIPPING at checkout.</p>
+    </div>
+    <div class="product-grid col-sm-12" *ngIf="browseService">
+       <div class="tile col-lg-3 col-md-4 col-sm-6 col-xs-12" tabindex="0" 
+       *ngFor="let item of browseService.values.products">
+            <app-browsegrid [item]='item'></app-browsegrid>
+       </div>
+    </div>
+  </div>
+</div>
+
+<ngx-loading [show]="loadingBackdrop" [config]="{ backdropBorderRadius: '10px' }"></ngx-loading>

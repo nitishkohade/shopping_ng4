@@ -1,0 +1,100 @@
+
+.promo-circle-wrapper {
+  display: inline-block;
+  position: relative;
+
+  .promo-circle-copy {
+    color: $white;
+    font-size: 1.4rem;
+    font-family: Tele-Fet, sans-serif;
+    position: absolute;
+    width: 40px;
+    top: 10px;
+    left: 10px;
+    text-align: center;
+    max-height: 60px;
+  }
+}
+
+.promo-circle-copy.legal {
+  font-size: 1rem;
+  line-height: 1.2rem;
+}
+
+.promo-circle,
+.promo-circle-small{
+  display: inline-block;
+  position: relative;
+  background-color: $brandMagenta;
+  color: $white;
+  text-align: center;
+  overflow: hidden;
+
+  &>span {
+    text-transform: uppercase;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+    font-family: Tele-Fet, sans-serif;
+    font-size: 14px;
+  }
+}
+
+.promo-circle {
+  height: 60px;
+  width: 60px;
+  line-height: 60px;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+
+  &>span.one-word-per-line {
+    word-spacing: 60px;
+  }
+}
+
+.promo-circle-small{
+  height: 35px;
+  width: 35px;
+  line-height: 35px;
+  border-radius: 17.5px;
+  -webkit-border-radius: 17.5px;
+  -moz-border-radius: 17.5px;
+
+  &>span.one-word-per-line {
+    word-spacing: 60px;
+  }
+}
+.highlight-flag {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  min-width:200px;
+  span {
+    display: inline-block;
+    padding: 5px 15px 5px 10px;
+    background-color: #767676;
+    color: #fff;
+    font-family: Tele-Fet;
+    line-height: 1.5rem;
+    font-size:1.2rem;
+    text-transform: uppercase;
+    min-width: 200px;
+    @include break-max($mobileMax){
+      font-size: 1.1rem;
+      line-height: 1.3rem;
+    }
+  }
+}
+.highlight-flag::after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 4.5rem 1.5rem;
+  border-color: transparent transparent white transparent;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  top: inherit;
+}

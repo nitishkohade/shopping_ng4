@@ -1,0 +1,136 @@
+@import 'variables';
+@import "mixins";
+
+.pagination {
+  border-radius: 0;
+
+  &> li {
+
+    &> a {
+      background-color: transparent;
+      border: none;
+      color: $brandMagenta;
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 24px;
+      padding: 6px;
+      width: 36px;
+      height: 36px;
+      text-align: center;
+
+      &.active {
+        background-color: $brandMagenta;
+        border-radius: 20px;
+        color: $white;
+
+        &:hover {
+          background-color: $brandMagenta;
+          color: $white;
+        }
+
+        &:focus {
+          background-color: $brandMagenta;
+          color: $white;
+        }
+      }
+
+      &.disabled,
+      &.disabled:hover,
+      &.disabled:focus {
+        background-color: transparent;
+        color: $grayLight;
+        pointer-events: none;
+      }
+
+      &:hover {
+        background-color: transparent;
+        color: $veryDarkMagenta;
+        text-decoration: none;
+      }
+
+      &:focus {
+        background-color: transparent;
+        color: $veryDarkMagenta;
+        text-decoration: none;
+      }
+
+      &.prev,
+      &.next {
+        font-size: 14px;
+      }
+
+      &.ellipsis {
+        color: $grayLight;
+        cursor: default;
+      }
+
+      &.view-all-pages {
+        font-weight: normal;
+        padding-left: 8px;
+        white-space: nowrap;
+      }
+    }
+
+  }
+}
+
+.pagination-lg {
+  @include break-min($mobileMax) {
+    > li {
+      > a,
+      > span {
+        padding: 10px;
+        font-size: 18px;
+        width: 40px;
+        height: 40px;
+        line-height: 22px;
+      }
+
+      & > a {
+        &.prev,
+        &.next {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+.pagination-sm {
+  > li {
+    > a,
+    > span {
+      padding: 5px;
+      font-size: 12px;
+      line-height: 21px;
+      width: 30px;
+      height: 30px;
+    }
+
+    &> a {
+      &.prev,
+      &.next {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+.page-items-number {
+  color: $brandMagenta;
+  font-weight: bold;
+  margin-right: $globalSpacingMedium;
+  font-size: 14px;
+  line-height: 17px;
+
+  &.small {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  &.active {
+    border-bottom: 3px solid $brandMagenta;
+    pointer-events: none;
+  }
+}
+

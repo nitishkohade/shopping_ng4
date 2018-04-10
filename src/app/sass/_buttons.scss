@@ -1,0 +1,193 @@
+@import "variables";
+
+$btn-radius-base: 2.3rem !default;
+$btn-width-base: 240px !default;
+$btn-height-base: 45px !default;
+
+.btn.disabled, .btn[disabled], fieldset[disabled] .btn {
+  opacity:1 !important;
+}
+
+.btn {
+  border-radius: $btn-radius-base;
+  box-shadow: none;
+  font-family: Tele-Fet, sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.5rem;
+  padding: 1.4rem 1rem;
+  text-overflow: ellipsis;
+  width: $btn-width-base;
+  height: $btn-height-base;
+
+  &:hover, &:focus, &active, &:active:hover, &:active:focus {
+    box-shadow: none;
+  }
+
+  &.disabled:hover, &:disabled:hover {
+    border-color: $grayLight;
+    color: $grayDark;
+    background-color: $grayLight;
+  }
+
+  &.disabled, &[disabled] {
+    background-color: $grayLight;
+    border-color: $grayLight;
+    color: $grayDark;
+    cursor: not-allowed;
+
+    &:hover, :focus, :active, :active:hover {
+      border-color: $grayLight;
+      color: $grayDark;
+    }
+  }
+
+  &.btn-half {
+    width: 120px;
+  }
+
+  @include break-max($mobileMax){
+    &.btn-sm-half {
+      width: 120px;
+    }
+  }
+}
+
+.btn-small, .btn-sm {
+  border-radius: 1.6rem;
+  font-size: 1.6rem;
+  padding: 0.65rem 0.5rem;
+  width: 170px;
+  height: 30px;
+}
+
+.btn-primary, .btn-default {
+  background-color: $brandMagenta;
+  border-color: $brandMagenta;
+  color: $white;
+
+  &:hover, &:focus, &active, &:active:hover, &:active:focus {
+    background-color: $darkMagenta;
+    border-color: $darkMagenta;
+    color: $white;
+  }
+}
+
+.btn-secondary {
+  background-color: $white;
+  border-color: $grayLight;
+  color: $brandMagenta;
+
+  &:hover, &:focus, &active, &:active:hover, &:active:focus {
+    background-color: $white;
+    border-color: $brandMagenta;
+    color: $brandMagenta;
+  }
+
+  &.disabled:hover, &:disabled:hover {
+    cursor: not-allowed;
+    border-color: $grayLight;
+    color: $grayDark;
+    background-color: $grayLight;
+  }
+}
+
+.btn-success {
+
+}
+
+.btn-info {
+
+}
+
+.btn-warning {
+
+}
+
+.btn-danger {
+
+}
+
+a.btn.disabled {
+  cursor: not-allowed;
+}
+
+.onoffswitch {
+  position: relative;
+  width: 70px;
+  height: 29px;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select: none;
+
+  input {
+    position: absolute;
+    left: -9999px;
+
+    &:focus + label{
+      outline: 1px solid #66afe9;
+    }
+    &:checked + label span:first-child {
+      margin-left: 0;
+    }
+    &:checked + label span:nth-child(2) {
+      right: 0px;
+      background-color: #FFFFFF;
+    }
+  }
+
+  label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid #FFFFFF;
+    border-radius: 50px;
+  }
+  span:first-child{
+    display: block;
+    width: 200%;
+    margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+
+    &:before, &:after{
+      display: block;
+      float: left;
+      width: 50%;
+      height: 28px;
+      padding: 0;
+      line-height: 28px;
+      font-size: 14px;
+      color: #FFFFFF;
+      font-family: Trebuchet, Arial, sans-serif;
+      font-weight: bold;
+      box-sizing: border-box;
+    }
+
+    &:before{
+      content: "ON";
+      padding-left: 11px;
+      background-color: #E20074;
+      color: #FFFFFF;
+    }
+
+    &:after{
+      content: "OFF";
+      padding-right: 8px;
+      background-color: #767676;
+      color: #FFFFFF;
+      text-align: right;
+    }
+  }
+  span:nth-child(2){
+    display: block;
+    width: 24px;
+    margin: 3px 3px 0px;
+    background: #FFFFFF;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 39px;
+    border: 2px solid #FFFFFF;
+    border-radius: 50px;
+    transition: all 0.3s ease-in 0s;
+  }
+}

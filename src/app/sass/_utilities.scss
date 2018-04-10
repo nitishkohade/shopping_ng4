@@ -1,0 +1,107 @@
+// Alignment
+.content-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+  position: relative;
+
+  @include break-min(321px){
+    padding: 0;
+    width: 940px;
+  }
+}
+
+.vertical-align {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.centered{
+  float: none;
+  margin: 0 auto;
+}
+
+.error-message {
+  color: $red;
+  display: none;
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin-bottom: 1rem;
+}
+
+.show-errors .error-message {
+  display: block;
+}
+
+.back-to-top {
+  display: inline-block;
+  font-size: 2rem;
+  padding: 9px 13px 9px;
+
+  .icon {
+    padding-right: 0;
+
+    i {
+      padding-right: 0;
+    }
+  }
+}
+
+.text-align-center, .alignCenter {
+  text-align: center !important;
+}
+
+.text-align-left {
+  text-align: left !important;
+}
+
+.text-align-right {
+  text-align: right !important;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px){
+  .text-xs-center {
+    text-align: center !important;
+  }
+  .text-xs-right {
+    text-align: right !important;
+  }
+  .text-xs-left {
+    text-align: left !important;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px){
+  .text-sm-center {
+    text-align: center !important;
+  }
+  .text-sm-right {
+    text-align: right !important;
+  }
+  .text-sm-left {
+    text-align: left !important;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1200px){
+  .text-md-center {
+    text-align: center !important;
+  }
+  .text-md-right {
+    text-align: right !important;
+  }
+  .text-md-left {
+    text-align: left !important;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .text-lg-center {
+    text-align: center !important;
+  }
+  .text-lg-right {
+    text-align: right !important;
+  }
+  .text-lg-left {
+    text-align: left !important;
+  }
+}

@@ -1,0 +1,106 @@
+@import 'variables';
+@import 'mixins';
+
+//Accordion
+.accordion {
+
+  &.panel-group{
+    >.panel{
+      margin-top: 0;
+    }
+  }
+
+  //Bootstrap overrides
+  .panel {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    margin-top: 0;
+    padding-top: 0;
+
+    &> .panel-heading {
+      background-color: $white;
+      border-left: none;
+      border-right: none;
+      border-top: none;
+      border-radius: 0;
+      color: $brandMagenta;
+      padding: 2px 20px 5px 35px;
+
+      @include break-max($mobileMax){
+        padding: 2px 10px 5px 20px;
+      }
+
+      &+ .panel-collapse {
+
+        &> .panel-body {
+          border: none;
+        }
+      }
+    }
+  }
+}
+
+
+.accordion-nav {
+  color: $brandMagenta;
+  padding: $globalSpacingMedium $globalSpacingLarge $globalSpacingMedium $globalSpacingXL;
+
+  @include break-max($mobileMax) {
+    padding: $globalSpacingMedium $globalSpacingSmall $globalSpacingMedium $globalSpacingLarge;
+  }
+
+  background-color: $white;
+  display: block;
+  font-family: Arial-Regular, sans-serif;
+  font-size: 16px;
+  position: relative;
+  width: 100%;
+
+  &>.title{
+    display: inline-block;
+    margin-left: 20px;
+    vertical-align: middle;
+
+    &>.sub-title{
+      margin-bottom: 0;
+    }
+  }
+
+  &>.price-lockup-wrapper{
+    display: inline-block;
+    vertical-align: middle;
+    float: right;
+    margin-right: 150px;
+  }
+
+  &.success:before {
+    content: '\f00c';
+    font-family: FontAwesome, sans-serif;
+    margin-right: $globalSpacingMedium;
+    color: $green;
+  }
+
+  &.collapsed:after {
+    content: '\f078';
+    font-family: FontAwesome, sans-serif;
+    color: $brandMagenta;
+    vertical-align: middle;
+    right: 20px;
+    position: absolute;
+  }
+
+  &:not(.collapsed):after{
+    content: '\f077';
+    font-family: FontAwesome, sans-serif;
+    color: $brandMagenta;
+    vertical-align: middle;
+    right: 20px;
+    position: absolute;
+  }
+
+  &:hover, &:active {
+    color: $brandMagenta;
+  }
+}
+

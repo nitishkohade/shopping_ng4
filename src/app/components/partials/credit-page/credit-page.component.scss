@@ -1,0 +1,99 @@
+.browse-view .creditClassText>span {
+    display: block;
+}
+.browse-view  .creditClassBlock {
+    padding-top: 15px;
+}
+.credit-main-text {
+    /* font-weight: 100; */
+  
+    font-size: 2.2rem;
+}
+.browse-view .creditClassText {
+    max-width: 80%;
+    display: block;
+    float: left;
+    text-align: left;
+    padding-left: 20px;
+    /* font-weight: 100; */
+}
+.checkbox label, .radio label {
+    min-height: 20px;
+    padding-left: 2px;
+    margin-bottom: 0;
+    font-weight: 400;
+    cursor: pointer;   
+    float: left;
+}
+
+.browse-view  .creditClassRadio>input[type="radio"]
+{
+
+    opacity:0;
+}
+.browse-view  .creditClassRadio>input[type="radio"]:checked+span {
+    background-image: url("https://www.t-mobile.com/content/dam/t-mobile/radio-button-sprite.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;   
+    width: 32px;
+    height: 32px;
+    display: block;    
+    z-index:0;
+    margin-top:-24px;
+}
+
+.browse-view  .creditClassRadio>input[type="radio"]+span {
+    background-image: url("https://www.t-mobile.com/content/dam/t-mobile/radio-button-sprite.png");
+    background-repeat: no-repeat;
+    background-position: -31px 0;   
+    width: 32px;
+    height: 32px;
+    display: block;    
+    z-index:0;
+    margin-top:-24px;
+}
+.creditClassBlock.creditWrapper .border-right ~ .border-right ~ .border-right
+{
+    border-right:none;
+}
+.creditClassBlock.creditWrapper{
+       
+         display: flex;
+    }
+
+@media only screen and (max-width: 768px)
+{
+     .credit-main-text {
+        font-size: 1.2rem;
+        }
+     .browse-view .creditClassText {
+        max-width:68%;
+        }
+}
+@media only screen and (max-width: 480px)
+{
+    .creditClassBlock.creditWrapper{
+       
+        flex-direction: column;
+    }
+    .creditClassBlock.creditWrapper .border-right{
+       
+        flex:1;
+        border-bottom:1px solid #dddddd;
+        border-right:none;
+        padding-bottom:12px;
+    }
+    .browse-view .creditClassText
+    {
+        max-width:78%;
+    }
+    .creditClassBlock.creditWrapper div label{
+        display:block;
+    }
+    .credit-main-text {
+    font-size: 1.2rem;
+    }
+    
+}   
+
+

@@ -1,0 +1,36 @@
+@import 'variables';
+
+// Line Number
+.line-number {
+  border-bottom: 3px solid $brandMagenta;
+  color: $black;
+  display: inline-block;
+  font-family: Tele-Fet, sans-serif;
+  font-size: 40px;
+  line-height: 50px;
+
+  @include break-max($mobileMax){
+    font-size: 50px;
+  }
+
+  &.small {
+    font-size: 30px;
+    line-height: 35px;
+  }
+
+  &.xsmall {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  &.xxsmall {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+a.line-number {
+  color: $brandMagenta;
+  font-weight: bold;
+  margin-right: $globalSpacingMedium;
+}

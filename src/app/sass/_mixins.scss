@@ -1,0 +1,33 @@
+@import "variables";
+
+// Media Queries
+@mixin break-max($breakpoint) {
+  @media screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin break-min($breakpoint) {
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin break-min-max($minBreakpoint, $maxBreakpoint) {
+  @media screen and (min-width: $minBreakpoint) and (max-width: $maxBreakpoint) {
+    @content;
+  }
+}
+
+// Helpers
+@mixin vcenter {
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%)translateY(-50%);
+}
+
+@mixin valign {
+  top: 50%;
+  transform: translateY(-50%);
+  position: relative;
+}

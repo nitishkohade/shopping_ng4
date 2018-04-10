@@ -1,0 +1,33 @@
+@import './app/base.scss';
+
+div.container-main {
+    background-color: #f6f5f5;
+    padding-top: 76px;
+    padding-bottom: 50px;
+}
+.navbar-default {
+    background-color: #fff !important;
+    border-color: #bebebe !important;
+}
+.navbar-fixed-top, .navbar-static-top {
+    border-radius: 0;
+}
+  .navbar-fixed-top {
+    top: 0;
+    border-width: 0 0 1px;
+}
+.navbar-default .navbar-nav>li>a {
+    color: #e20074 !important;
+    font-weight: 700;
+}
+  .navbar-nav>li>a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .nav>li>a {
+    padding: 10px 15px;
+}
+  .nav>li, .nav>li>a {
+    display: block;
+    position: relative;
+}

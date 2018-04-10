@@ -1,0 +1,153 @@
+
+$modal: 600px;
+$modalClose: 700px;
+$modalLarge: 780px;
+$modalLargeClose: 880px;
+$modalSmall: 300px;
+$modalSmallClose: 440px;
+
+//Modals
+.modal {
+  padding-right: 0 !important;
+
+  .modal-dialog {
+    margin: 100px auto;
+    width: $modal;
+
+    @include break-max($modal){
+      margin: 0;
+      width: 100%;
+    }
+
+    &.modal-lg {
+      width: $modalLarge;
+
+      @include break-max($modalLarge){
+        width: 100%;
+      }
+
+      .modal-content  {
+
+        .modal-header {
+          h2
+          {
+            margin:5px 0 0;
+
+          }
+          .font-32
+          {
+            font-size: 3.2rem;
+            margin-top: -1px;
+          }
+          .close {
+
+            @include break-max($modalLarge){
+              top: 2rem;
+              margin-right: 2rem;
+            }
+
+            @include break-max($modalLargeClose){
+              right: 0;
+            }
+          }
+        }
+      }
+    }
+
+    &.modal-sm {
+      width: $modalSmall;
+
+      @include break-max($modal){
+        margin: 100px auto;
+        width: $modalSmall;
+      }
+
+      .modal-content  {
+
+        .modal-header {
+
+          .close {
+
+            @include break-max($modal){
+              top: -60px;
+              margin-right: 0;
+            }
+
+            @include break-max($modalClose){
+              right: -60px;
+            }
+
+            @include break-max($modalSmallClose){
+              right: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .modal-content  {
+      border-radius: 0;
+      box-shadow: none;
+
+      .modal-header {
+        padding: 30px 40px 15px;
+        border-bottom: none;
+
+        .close {
+          color: $brandMagenta;
+          font: normal normal normal 3rem/1 FontAwesome;
+          margin-top: -2px;
+          opacity: 1;
+          position: absolute;
+          top: -60px;
+          right: -60px;
+
+          &:before {
+            content: "\f00d";
+          }
+
+          @include break-max($modal){
+            top: 2rem;
+            margin-right: 15px;
+          }
+
+          @include break-max($modalClose){
+            right: 0;
+          }
+
+          span {
+            display: none;
+          }
+        }
+      }
+
+      .modal-footer {
+        padding-bottom: 4rem;
+        text-align: center;
+        border-top: none;
+
+        .btn {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}
+
+//modal close
+.close {
+  &.magenta {
+    padding: 1px 6px;
+    color: $brandMagenta;
+    opacity: 1;
+  }
+}
+
+.modal-backdrop.in {
+  background-color: $white;
+  opacity: .7 !important;
+}
+
+.modal-content{
+  overflow: visible;
+}

@@ -1,0 +1,36 @@
+<div class="container">
+<div class="row">
+<div class="col-xs-12 center" >
+  <article class="p-t-20">
+    <h6 class="text-center">Please select your credit.</h6>
+    <p  role="article" class="legal p-t-0 ng-binding text-center">Providing your credit category allows us to estimate your
+      down payment. Everybody pays the same overall price.</p>
+  </article>
+<div class="row browse-view border-bottom credit-offer" >
+  <div class="text-center creditClassBlock creditWrapper col-md-12 col-xs-12 col-sm-12">
+     <div  *ngFor="let item of data.creditClassSelector.class; let i = index" class="p-lg-b-20 p-xs-b-50 p-xs-t-10 p-lg-t-0  ng-scope border-right no-mobile-border-right col-lg-4 col-md-4
+      col-sm-12 col-xs-12">
+      <label for={{i}}>
+        <div class="radio m-xs-t-35 m-sm-t-35 m-md-t-35">
+            <label class="creditClassRadio p-lg-t-10 p-xs-t-5" style="text-indent:-9999px">
+              credit selector
+            
+               <input type="radio" role="radio" id={{i}} name="radio" [checked]="i===1" [value]="credit1" (click)="onawsomecredit(i)">
+                 <span></span></label>          
+                    <span class="creditClassText">
+          <span class="highlight-flag"></span>
+            <span class="credit-main-text word-wrap text-magenta p-lg-b-10 p-lg-t-10 p-xs-t-0" aria-labeledby="AWESOME CREDIT" aria-hidden="false">
+              {{item.label}}</span>
+            <span class="credit-subtext xsmall text-gray-dark" aria-labeledby="" aria-hidden="false">
+              {{item.description}}</span>
+       </span>
+        </div>
+        </label>
+     </div> 
+    
+</div>
+</div>
+</div>
+</div>
+
+

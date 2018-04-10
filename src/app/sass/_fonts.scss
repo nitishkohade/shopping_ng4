@@ -1,0 +1,77 @@
+// @import "variables";
+
+// /* Fonts */
+// @font-face {
+//   font-family: Tele-Nor;
+//   src: url('#{$font-path}/tele-grotesknor.eot');
+//   src: url('#{$font-path}/tele-grotesknor.eot?#iefix') format('embedded-opentype'),
+//        url('#{$font-path}/tele-grotesknor.woff2') format('woff2'),
+//        url('#{$font-path}/tele-grotesknor.woff') format('woff'),
+//        url('#{$font-path}/tele-grotesknor.ttf') format('truetype'),
+//        url('#{$font-path}/tele-grotesknor.svg') format('svg');
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+// @font-face {
+//   font-family: Tele-Fet;
+//   src: url('#{$font-path}/tele-groteskfet.eot');
+//   src: url('#{$font-path}/tele-groteskfet.eot?#iefix') format('embedded-opentype'),
+//        url('#{$font-path}/tele-groteskfet.woff2') format('woff2'),
+//        url('#{$font-path}/tele-groteskfet.woff') format('woff'),
+//        url('#{$font-path}/tele-groteskfet.ttf') format('truetype'),
+//        url('#{$font-path}/tele-groteskfet.svg') format('svg');
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+// @font-face {
+//   font-family: Tele-Hal;
+//   src: url('#{$font-path}/tele-groteskhal.eot');
+//   src: url('#{$font-path}/tele-groteskhal.eot?#iefix') format('embedded-opentype'),
+//        url('#{$font-path}/tele-groteskhal.woff2') format('woff2'),
+//        url('#{$font-path}/tele-groteskhal.woff') format('woff'),
+//        url('#{$font-path}/tele-groteskhal.ttf') format('truetype'),
+//        url('#{$font-path}/tele-groteskhal.svg') format('svg');
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+// @font-face {
+//   font-family: Tele-Ult;
+//   src: url('#{$font-path}/tele-groteskult.eot');
+//   src: url('#{$font-path}/tele-groteskult.eot?#iefix') format('embedded-opentype'),
+//        url('#{$font-path}/tele-groteskult.woff2') format('woff2'),
+//        url('#{$font-path}/tele-groteskult.woff') format('woff'),
+//        url('#{$font-path}/tele-groteskult.ttf') format('truetype'),
+//        url('#{$font-path}/tele-groteskult.svg') format('svg');
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+// //Import Arial
+// @font-face {
+//   font-family: Arial-Bold;
+//   src: url('#{$font-path}/Arial-Bold.woff') format('woff'),
+//        url('#{$font-path}/Arial-Bold.ttf') format('truetype');
+// }
+
+// @font-face {
+//   font-family: Arial-Regular;
+//   src: url('#{$font-path}/Arial.eot');
+//   src: url('#{$font-path}/Arial.eot?#iefix') format('embedded-opentype'),
+//        url('#{$font-path}/Arial.woff2') format('woff2'),
+//        url('#{$font-path}/Arial.woff') format('woff'),
+//        url('#{$font-path}/Arial.ttf') format('truetype'),
+//        url('#{$font-path}/Arial.svg') format('svg');
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+// .font-tele-nor { font-family: Tele-Nor, sans-serif; }
+// .font-tele-fet { font-family: Tele-Fet, sans-serif; }
+// .font-tele-hal { font-family: Tele-Hal, sans-serif; }
+// .font-tele-ult { font-family: Tele-Ult, sans-serif; }
+// .font-arial { font-family: Arial-Regular, sans-serif; }
+// .font-arial-bold { font-family: Arial-Bold, sans-serif; }
+

@@ -1,0 +1,216 @@
+
+// Tags
+html {
+  font-size: 62.50%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: $grayDark;
+  background-color: $grayLighter;
+  font-family: Arial, sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  min-width: 320px;
+  -webkit-font-smoothing: antialiased;
+
+  @include break-max($mobileMax){
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+  }
+}
+
+a {
+  color: $brandMagenta;
+
+  &:hover, &:focus {
+    color: $veryDarkMagenta;
+    text-decoration: none;
+  }
+}
+
+a[disabled] {
+  pointer-events: none;
+}
+
+p {
+  color: $grayDark;
+  font-size: 1.6rem;
+  margin-bottom: 0;
+  line-height: 1.9rem;
+
+  @include break-max($mobileMax){
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style: none;
+  }
+}
+
+h1,
+.h1 {
+  font-family: Tele-Nor, sans-serif;
+  color: $grayDarker;
+  font-size: 6rem;
+  line-height: 7.4rem;
+
+  @include break-max($mobileMax){
+    font-size: 4.4rem;
+    line-height: 5.5rem;
+  }
+}
+
+h2,
+.h2 {
+  font-family: Tele-Fet, sans-serif;
+  color: $grayDarker;
+  font-size: 5.4rem;
+  line-height: 6.5rem;
+
+  @include break-max($mobileMax){
+    font-size: 3.2rem;
+    line-height: 3.8rem;
+  }
+}
+
+h3,
+.h3 {
+  font-family: Tele-Fet, sans-serif;
+  color: $grayDarker;
+  font-size: 4rem;
+  line-height: 4.8rem;
+
+  @include break-max($mobileMax){
+    font-size: 2.8rem;
+    line-height: 3.4rem;
+  }
+}
+
+h4,
+.h4 {
+  font-family: Tele-Fet, sans-serif;
+  color: $grayDarker;
+  font-size: 3.2rem;
+  line-height: 3.8rem;
+
+  @include break-max($mobileMax){
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+  }
+}
+
+h5,
+.h5 {
+  font-family: Tele-Fet, sans-serif;
+  color: $grayDarker;
+  font-size: 2.6rem;
+  line-height: 3.1rem;
+
+  @include break-max($mobileMax){
+    font-size: 2rem;
+    line-height: 2.4rem;
+  }
+}
+
+h6,
+.h6 {
+  font-family: Tele-Hal, sans-serif;
+  color: $grayDarker;
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+
+  @include break-max($mobileMax){
+    font-size: 2rem;
+    line-height: 2.4rem;
+  }
+}
+
+// Text Colors
+.text-black {color: $black;}
+.text-white {color: $white;}
+.text-magenta, .text-brand-magenta, .text-primary {color: $brandMagenta;}
+.text-dark-magenta {color: $darkMagenta;}
+.text-very-dark-magenta {color: $veryDarkMagenta;}
+.text-gray {color: $gray;}
+.text-gray-dark {color: $grayDark;}
+.text-gray-darker {color: $grayDarker;}
+.text-gray-light {color: $grayLight;}
+.text-gray-lighter {color: $grayLighter;}
+.text-green {color: $green;}
+.text-red, .text-error {color: $red;}
+
+// Background Colors
+.bg-black {background-color: $black;}
+.bg-white {background-color: $white;}
+.bg-magenta, .bg-brand-magenta {background-color: $brandMagenta;}
+.bg-dark-magenta {background-color: $darkMagenta;}
+.bg-very-dark-magenta {background-color: $veryDarkMagenta;}
+.bg-gray {background-color: $gray;}
+.bg-gray-dark {background-color: $grayDark;}
+.bg-gray-darker {background-color: $grayDarker;}
+.bg-gray {background-color: $gray;}
+.bg-gray-light {background-color: $grayLight;}
+.bg-gray-lighter {background-color: $grayLighter;}
+.bg-green {background-color: $green;}
+.bg-red {background-color: $red;}
+.bg-cart {background-color: $cartBackground;}
+.bg-cart-boxes {background-color: $cartBoxes;}
+
+// Font Weight
+.text-bold {font-family: Tele-Ult, sans-serif;}
+.paragraph-bold {font-family: Arial-Bold, sans-serif;}
+.text-strike-through {text-decoration: line-through;}
+.font-bold { font-weight : bold }
+
+// Font Sizing
+.lead {
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+
+  @include break-max($mobileMax){
+    font-size: 1.6rem;
+  }
+}
+
+.regular {
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+
+  @include break-max($mobileMax){
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+  }
+}
+
+.small {
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+
+  @include break-max($mobileMax){
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+}
+
+.xsmall {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+
+  @include break-max($mobileMax){
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+  }
+}
+
+.legal {
+  font-size: 1rem;
+  line-height: 1.2rem;
+}

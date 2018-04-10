@@ -1,0 +1,30 @@
+//rating box
+.rating-box {
+  position: relative;
+  vertical-align: middle;
+  font-size: 20px;
+  font-family: FontAwesome, sans-serif;
+  display: inline-block;
+  color: $grayLight;
+  margin-left: 10px;
+}
+
+.rating-box:before {
+  content: "\f005 \f005 \f005 \f005 \f005";
+}
+
+.rating-box.small {
+  font-size: 15px;
+}
+
+.rating {
+  position: absolute;
+  left: 0;
+  top: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  color: $brandMagenta;
+}
+.rating:before {
+  content: "\f005 \f005 \f005 \f005 \f005";
+}

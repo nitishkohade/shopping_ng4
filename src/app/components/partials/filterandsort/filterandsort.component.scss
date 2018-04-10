@@ -1,0 +1,207 @@
+@import '../../../base.scss';
+#filter-and-sort {
+  li.selected {
+    background-color: #fff;
+  }
+}
+.bdr-lt {
+    border-left: 1px solid #ddd;
+}
+
+.deviceSelection {
+  position: relative;
+
+}
+
+.viewSection {
+  clear: both;
+}
+
+@media screen and (min-width: 768px) {
+  #dropdownMenu1 {
+    position: absolute;
+  }
+  @-moz-document url-prefix() {
+    .Mozilla-left-0 {
+      left: 0px;
+    }
+  }
+}
+
+.deviceSelectionTopLabel {
+  display: none;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .deviceSelectionTopLabel {
+    display: block;
+  }
+  .deviceSelectionLeftLabel {
+    display: none;
+  }
+}
+
+.deviceSelectionLabel {
+  float: left;
+}
+
+.deviceSelection i.fa-search {
+  position: absolute;
+  top: 8px;
+  right: 9px;
+  color: #e30778;
+
+}
+
+/*MAG-291 Changes starts| Filter categories css starts*/
+
+.filterDropdown {
+  margin-top: $globalSpacingLarge;
+  margin-bottom: $globalSpacingLarge;
+  position: relative;
+  float: left;
+  .btn-default {
+    border-radius: 0px;
+    width: 190px;
+    padding: 10px 12px;
+    text-align: left;
+    position: relative;
+    border-color: #adadad;
+    outline: none;
+    background-color: transparent;
+    color: #333;
+  }
+  .custom-disabled, .custom-disabled:hover {
+    background-color: #eee !important;
+    .custom-disabled-text {
+      color: #BEBEBE;
+    }
+  }
+  .fa {
+    position: absolute;
+    font-weight: bold;
+    cursor: pointer;
+    top: 7px;
+    right: 11px;
+    padding-left: 11px;
+    color: #e20074;
+    font-size: 24px;
+  }
+  .filter-menu {
+    margin-bottom: $globalSpacingXL;
+    &:focus {
+      outline: none !important;
+      border: none;
+    }
+  }
+
+  .category-wrapper {
+    min-height: 250px;
+    border-left: 1px solid #ddd;
+    .checkbox {
+      padding-left: 0;
+      break-inside: avoid-column;
+      -webkit-column-break-inside: avoid;
+    }
+    .filter-facet-title {
+      padding-left: 5px;
+    }
+  }
+
+  .category-wrapper:first-child {
+    border-left: 0 none;
+  }
+
+  .btn:hover,
+  .btn:active,
+  .btn:focus,
+  .btn:active:focus {
+    background-color: transparent;
+    border-color: #adadad !important;
+    box-shadow: none;
+    color: #333;
+  }
+  .dropdown-menu.sort-menu {
+    width: 190px;
+  }
+}
+
+/*.filterDropdown.open > .dropdown-toggle,
+.filterDropdown.open > .dropdown-toggle.btn-default:hover,
+.filterDropdown.open > .dropdown-toggle.btn-default.focus,
+.filterDropdown.open > .dropdown-toggle.btn-default:focus{
+  background-color: transparent;
+  border-color: #adadad;
+  box-shadow: none;
+  border-bottom: 1px solid #ddd;
+  color:#333;
+}*/
+
+/* Filter Count start*/
+.itemsPerPage {
+  display: inline;
+  margin-right: 25px;
+
+  li {
+    display: inline-block;
+    margin: 0px 5px;
+    color: #e20074;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.activeSelItemsPerPage {
+  border-bottom: 3px solid #e20074;
+}
+
+/* Filter Count end*/
+
+.bdr-lt {
+  border-left: 1px solid #ddd;
+}
+
+.campaign, .campaign-t-mobile-campaign {
+  height: auto !important;
+}
+
+/*Filter categories css ends*/
+
+@media screen and (max-width: 992px) and (min-width: 767px) {
+  .column-list .checkbox label {
+    word-break: break-word;
+  }
+}
+.bdr-lt {
+    border-left: 1px solid #ddd;
+}
+
+.results-count {
+    float: right;
+    font-weight: 700;
+}
+.filterDropdown.with-border {
+    padding-bottom: 0;
+}
+ .with-border {
+    border: 1px solid #ddd;
+    width: 100%;
+}
+.no-border {
+    border: 0 none!important;
+}
+
+@media screen and (max-width: 767px){
+  .creditWrapper {
+    flex-direction: column;
+  }
+}
+.creditWrapper{
+  display:flex;
+}
+.creditWrapper > div{
+  flex:1;
+}

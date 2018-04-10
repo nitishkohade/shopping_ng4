@@ -1,0 +1,94 @@
+<div class="row">
+  <app-credit-page></app-credit-page>
+</div>
+
+<section id="one" *ngIf="productDetail" class="p-t-35 browse-view">
+
+  <div class="row">
+    <div class="col-md-6 text-center p-t-35">
+              <app-product-slider [items]="productDetail.defaultProduct.productSlides">
+
+              </app-product-slider>
+
+             </div>
+
+
+    <div class="col-md-6 p-20 ">
+      <header>
+        <h3> {{productDetail.defaultProduct.Family}}</h3>
+      </header>
+      <p class="m-b-10"><img src="{{productDetail.defaultProduct.ReviewStarImagePath}}" />( {{productDetail.defaultProduct.ReviewCount}})</p>
+      <p [innerHtml]="productDetail.defaultProduct.Description"> </p>
+
+      <div class="row ">
+        <div class="col-md-4 p-t-20 ">
+          <label for="selectedMemory" class="m-b-15 xsmall p-a-0 ng-binding" aria-label="Memory:
+          32 GB">Memory: {{productDetail.defaultProduct.Memory}}
+          {{productDetail.defaultProduct.MemoryUOM}}</label>
+          <div class="form-group">
+         <select [(ngModel)]="selectedItem"  class="form-control " id="selectedMemory" (change)="updateOnMemoryChange(selectedItem)">
+     <option *ngFor="let item of productDetail.memoryVariant"
+             [ngValue]="item">
+             {{item}}
+     </option>
+</select>
+
+          </div>
+        </div>
+        <div class="col-md-8 p-t-20 ">
+          <div class="m-b-10 color-swatches">
+            <label for="selectedMemory" class="m-b-15 xsmall p-a-0 ">Color: {{productDetail.defaultProduct.Color}}
+          </label>
+            <div class="list-unstyled " role="list" *ngIf="productDetail.colorSwacthes.length >1">
+
+              <img *ngFor="let path of productDetail.colorSwacthes; let i=index" class="image-box-color  outLineGrey"  src="https://www.t-mobile.com{{path}}"
+[ngClass]="{outLineGrey: path ==  productDetail.defaultProduct.ColorSwatch}" (click)="updateOnSwatchChange(path)">
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+      <h4>{{productDetail.defaultProduct.FullPrice}}</h4>
+      <a href="#" class="btn btn-primary">Add to Cart</a>
+    </div>
+  </div>
+  <hr>
+  <div class="row flexbox">
+    <div class="col-xs-12 full-flex">
+
+      <h3>Features</h3>
+    </div>
+    <div class="flex-item col-md-6 p-xs-b-20" *ngFor="let item of productDetail.defaultProduct.Features">
+      <header>
+        <h5>{{item.Header}}</h5>
+        <p>{{item.Description}}</p>
+      </header>
+    </div>
+
+  </div>
+  <hr>
+
+  <div class="row  m-b-35">
+    <div class="col-md-8 ">
+
+      <h3>Specification</h3>
+
+    <div class="border-bottom col-md-12 p-xs-b-20" *ngFor="let item of productDetail.defaultProduct.Specifications">
+      <header>
+        <h5>{{item.label}}</h5>
+        <p>{{item.value}}</p>
+      </header>
+    </div>
+        </div>
+<div class="col-md-4">
+  <p class="text-center"> <img class="max-width" src="https://www.t-mobile.com{{productDetail.defaultProduct.SpecImage}}"></p>
+  <h4>{{productDetail.defaultProduct.ProductBoxSpec.label}}</h4>
+  <ul class="bulleted">
+    <li *ngFor="let item of productDetail.defaultProduct.ProductBoxSpec.value" class="bulleted lead text-gray-dark m-b-5 " >{{item}}</li>
+  </ul>
+</div>
+  </div>
+
+</section>

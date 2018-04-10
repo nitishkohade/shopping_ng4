@@ -1,0 +1,99 @@
+@import "variables";
+
+
+/*slider style */
+.slickSlider {
+    margin-top: 40px;
+}
+
+.slickSlider .slick-list{
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.slickSlider .slick-prev,
+.slickSlider .slick-prev:hover,
+.slickSlider .slick-prev:not(:hover) {
+    font-family: 'Glyphicons Halflings', serif;
+    color: gray;
+    content: "\e079";
+    left: 0;
+    z-index: 1000;
+}
+
+.slickSlider .slick-prev:before {
+    font-family: 'Glyphicons Halflings', serif;
+    font-size: 30px;
+    color: #e20074;
+    content: "\e079";
+    left: 0;
+    z-index: 1000;
+}
+
+.slickSlider .slick-next:before {
+    font-family: 'Glyphicons Halflings', serif;
+    font-size: 30px;
+    color: #e20074;
+    content: "\e080";
+    left: 0;
+    z-index: 1000;
+}
+
+.slickSlider .slick-next,
+.slickSlider .slick-next:hover,
+.slickSlider .slick-next:not(:hover) {
+    font-family: 'Glyphicons Halflings', serif;
+    color: $brandMagenta;
+    content: "\e080";
+    right: 0px;
+}
+
+.slickSlider ul.slick-dots {
+    margin-left: 0;
+    position:relative;
+    bottom:1px;
+}
+
+.slickSlider .slick-dots li {
+
+    background: white;
+    border-radius: 12px;
+    height: 10px;
+    width: 10px;
+    border: 1px solid #e20074;
+    display: inline-block;
+    /*box-shadow: 0 0 5px #e20074 inset;*/
+}
+
+.slickSlider .slick-dots li.slick-active {
+    background: $brandMagenta;
+}
+
+.slickSlider .slick-dots li button:before {
+    content: '';
+}
+
+//Changes made by Santhosh Kanban
+
+@media screen and (max-width: 767px) {
+  .slick-next.slick-arrow {
+    height: 30px;
+    width: 26px;
+  }
+  .slick-prev.slick-arrow{
+    height:30px;
+    width:30px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width : 991px) {
+  .slick-next.slick-arrow {
+    height: 30px;
+    width: 26px;
+  }
+  .slick-prev.slick-arrow{
+    height:30px;
+    width:30px;
+  }
+}
+//End changes.

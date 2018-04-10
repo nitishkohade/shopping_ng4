@@ -1,0 +1,49 @@
+.slick-slide img.productImage {
+    display: inline;
+}
+
+.slick-slider .slick-prev, .slick-slider .slick-prev:hover, .slick-slider .slick-prev:not(:hover) {
+    font-family: 'Glyphicons Halflings',serif;
+    color: gray;
+    content: "\e079";
+    left: 0;
+    z-index: 1000;
+}
+ .slick-next, .slick-prev {
+    height: 30px;
+    width: 30px;
+}
+
+.slick-slider .slick-prev:before {
+    font-family: 'Glyphicons Halflings',serif;
+    font-size: 30px;
+    color: #e20074;
+    content: "\e079";
+    left: 0;
+    z-index: 1000;
+}
+  .slick-slider .slick-next:before {
+    font-family: 'Glyphicons Halflings',serif;
+    font-size: 30px;
+    color: #e20074;
+    content: "\e080";
+    left: 0;
+    z-index: 1000;
+}
+.slick-slider .slick-next {
+    right: 0px;
+}
+.slick-slider .slick-dots li {
+    background: #fff;
+    border-radius: 12px;
+    height: 10px;
+    width: 10px;
+    border: 1px solid #e20074;
+    display: inline-block;
+}
+.slick-slider .slick-dots li.slick-active {
+    background: #e20074;
+}
+.slick-dots li button {
+opacity: 0;
+}

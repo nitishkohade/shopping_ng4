@@ -1,0 +1,19 @@
+
+.popover {
+  border: solid 1px $grayLight;
+  border-radius: 0;
+  color: $grayDarker;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.18);
+  font-size: 1.2rem;
+  font-family: Arial-Regular, sans-serif;
+}
+
+[data-toggle="popover"] {
+  margin-left: 5px;
+  font-size: 1.25em;
+}
+
+.info-popover > .btn {
+  outline: 0;
+  outline: none;
+}
